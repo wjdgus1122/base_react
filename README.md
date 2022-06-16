@@ -30,10 +30,10 @@ PORT=3001 npm run start
 => --save옵션은 패키지 제이슨에 dependency항목에 추가하는건데 생략 가능함
 =>기본 스타일은 css와 비슷
 
-## vscode-styled-components 확장자
+- [x] vscode-styled-components 확장자
 
 =>다운 받은후, style지정할때 styled라고만 적어야한다
 
-## npm i styled-reset
+- [x] npm i styled-reset
 
 =>리셋 스타일 적용
