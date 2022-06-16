@@ -14,10 +14,12 @@ import { Ex_1 } from "./components/4_map/Ex_1";
 import { Ex_db } from "./components/4_map/Ex_db";
 import { FoodMenu } from "./components/4_map/FoodMenu";
 import { MenuDb } from "./db";
+import { GlobalStyled } from "./styles/GlobalStyled";
 
 const App = () => {
   return (
     <div>
+      <GlobalStyled />
       {/* <TagRule /> */}
       {/* 1일차 */}
 
