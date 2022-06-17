@@ -51,3 +51,14 @@ export const conDb = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png",
   },
 ];
+
+export const MusicDb = [
+  {
+    id: 0,
+    msimg: "https://emcode.eu/wp-content/uploads/2020/08/emcode_black.jpg",
+    mstitle: "Blue bird",
+    mssinger: "Pick Dreams",
+    nickname: "patiname",
+    nickimg: "https://t1.daumcdn.net/cfile/blog/993F174A5AA1038A10",
+  },
+];

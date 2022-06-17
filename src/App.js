@@ -16,7 +16,9 @@ import { Ex_db } from "./components/4_map/Ex_db";
 import { FoodMenu } from "./components/4_map/FoodMenu";
 import { HomewwkDb } from "./components/4_map/HomewkDb";
 import { Homework } from "./components/4_map/Homework";
-import { conDb, MenuDb } from "./db";
+import { Icons } from "./components/5_MusicApp/Icons";
+import { MusicEx } from "./components/5_MusicApp/MusicEx";
+import { conDb, MenuDb, MusicDb } from "./db";
 import { GlobalStyled } from "./styles/GlobalStyled";
 
 const App = () => {
@@ -40,7 +42,11 @@ const App = () => {
       {/* <Ex_1 exdb={Ex_db} /> */}
       {/* <Content /> */}
       {/* <Homework hmdb={HomewwkDb} /> */}
-      <ConEx conData={conDb} />
+      {/* <ConEx conData={conDb} /> */}
+      {/* 4일차 */}
+
+      {/* <Icons /> */}
+      <MusicEx msdb={MusicDb} />
     </div>
   );
 };
