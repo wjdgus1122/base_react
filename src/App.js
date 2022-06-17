@@ -9,19 +9,20 @@ import {
 } from "./components/2_component/FnComponents";
 import { Menus } from "./components/3_props/Menus";
 import { Subject } from "./components/3_props/Subject";
+import { ConEx } from "./components/4_map/ConEx";
 import { Content } from "./components/4_map/Content";
 import { Ex_1 } from "./components/4_map/Ex_1";
 import { Ex_db } from "./components/4_map/Ex_db";
 import { FoodMenu } from "./components/4_map/FoodMenu";
 import { HomewwkDb } from "./components/4_map/HomewkDb";
 import { Homework } from "./components/4_map/Homework";
-import { MenuDb } from "./db";
+import { conDb, MenuDb } from "./db";
 import { GlobalStyled } from "./styles/GlobalStyled";
 
 const App = () => {
   return (
     <div>
-      {/* <GlobalStyled /> */}
+      <GlobalStyled />
       {/* <TagRule /> */}
       {/* 1일차 */}
 
@@ -38,7 +39,8 @@ const App = () => {
       {/* <FoodMenu menus={MenuDb} /> */}
       {/* <Ex_1 exdb={Ex_db} /> */}
       {/* <Content /> */}
-      <Homework hmdb={HomewwkDb} />
+      {/* <Homework hmdb={HomewwkDb} /> */}
+      <ConEx conData={conDb} />
     </div>
   );
 };

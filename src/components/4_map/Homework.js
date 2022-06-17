@@ -18,8 +18,8 @@ export const Homework = ({ hmdb }) => {
             <div
               style={{
                 width: "500px",
-                height: "600px",
-                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                height: "550px",
+                boxShadow: "rgba(0, 0, 0, 0.24) 0px 15px 13px",
               }}
             >
               <div
@@ -35,7 +35,7 @@ export const Homework = ({ hmdb }) => {
               <div
                 style={{
                   width: "100%",
-                  height: "200px",
+                  height: "150px",
                   backgroundColor: "gray",
                   padding: "0 15px",
                   boxSizing: "border-box",
@@ -51,7 +51,9 @@ export const Homework = ({ hmdb }) => {
                 >
                   {con.hwtitle}
                 </h3>
-                <p style={{ color: "white" }}>{con.hwtext}</p>
+                <p style={{ color: "white" }}>
+                  {con.hwtext.slice(0, 100) + "..."}
+                </p>
               </div>
             </div>
           </a>
