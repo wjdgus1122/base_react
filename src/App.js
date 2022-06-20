@@ -20,6 +20,7 @@ import { Icons } from "./components/5_MusicApp/Icons";
 import { MusicApp } from "./components/5_MusicApp/MusicApp";
 import { MusicEx } from "./components/5_MusicApp/MusicEx";
 import { ClassEvent } from "./components/6_Event/ClassEvent";
+import { ClickEx } from "./components/6_Event/ClickEx";
 import { FnEvent } from "./components/6_Event/FnEvent";
 import { conDb, MenuDb, MusicDb } from "./db";
 import { GlobalStyled } from "./styles/GlobalStyled";
@@ -54,7 +55,8 @@ const App = () => {
       {/* 5일차 */}
 
       {/* <ClassEvent /> */}
-      <FnEvent />
+      {/* <FnEvent /> */}
+      <ClickEx />
     </div>
   );
 };
