@@ -14,7 +14,7 @@ const SBtnWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 10px;
 `;
 const Items = styled.div`
   &:nth-child(3) {
