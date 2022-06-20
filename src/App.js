@@ -17,6 +17,7 @@ import { FoodMenu } from "./components/4_map/FoodMenu";
 import { HomewwkDb } from "./components/4_map/HomewkDb";
 import { Homework } from "./components/4_map/Homework";
 import { Icons } from "./components/5_MusicApp/Icons";
+import { MusicApp } from "./components/5_MusicApp/MusicApp";
 import { MusicEx } from "./components/5_MusicApp/MusicEx";
 import { conDb, MenuDb, MusicDb } from "./db";
 import { GlobalStyled } from "./styles/GlobalStyled";
@@ -46,7 +47,9 @@ const App = () => {
       {/* 4일차 */}
 
       {/* <Icons /> */}
-      <MusicEx msdb={MusicDb} />
+      {/* <MusicEx msdb={MusicDb} /> */}
+      <MusicApp />
+      {/* 5일차 */}
     </div>
   );
 };
