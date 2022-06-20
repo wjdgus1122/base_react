@@ -18,7 +18,7 @@ const MouseBox = styled.div`
   background-color: ${(props) => props.bgmouseColor};
 `;
 
-const Wrap = styled.div`
+const ButtonWrap = styled.div`
   width: 100%;
   height: 100vh;
   background-color: gray;
@@ -37,12 +37,31 @@ const PopMs = styled.div`
   justify-content: center;
   align-items: center;
 `;
+const ColorWrap = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+  align-items: center;
+`;
+const ColorBox = styled.div`
+  width: 500px;
+  height: 500px;
+  background-color: ${(props) => props.buttoncolor};
+  transform: rotateZ(${(props) => props.rotate});
+`;
+const buttonWrap = styled.div`
+  display: flex;
+`;
 
 export const ClickEx = () => {
   const [color, setcolor] = useState("gold");
   const [bool, SetBool] = useState(true);
   const [mscolor, setMscolor] = useState("salmon");
   const [distype, setDistype] = useState("none");
+  const [btcolor, setBtcolor] = useState("salmon");
+  const [btrotate, setBtrotate] = useState("0");
   const handleColor = () => {
     if (bool) {
       setcolor("black");
@@ -74,6 +93,19 @@ export const ClickEx = () => {
       SetBool(true);
     }
   };
+
+  const handlered = () => {
+    setBtcolor("red");
+  };
+  const handleblue = () => {
+    setBtcolor("blue");
+  };
+  const handleyellow = () => {
+    setBtcolor("gold");
+  };
+  const handlerotate = () => {
+    setBtrotate("365deg");
+  };
   return (
     <>
       {/* <Box bgColor={color} onClick={handleColor}>
@@ -84,10 +116,21 @@ export const ClickEx = () => {
         onMouseEnter={handleMouseOn}
         onMouseLeave={handleMouseLeave}
       /> */}
-      <button onClick={handlePopMs}>눌러보세요</button>
-      <Wrap dis={distype}>
+      {/* <button onClick={handlePopMs}>눌러보세요</button>
+      <ButtonWrap dis={distype}>
         <PopMs>야호오오오오오</PopMs>
-      </Wrap>
+      </ButtonWrap> */}
+
+      <ColorWrap>
+        버튼을 눌러보세요!
+        <ColorBox buttoncolor={btcolor} rotate={btrotate} />
+        <buttonWrap>
+          <button onClick={handlered}>빨강</button>
+          <button onClick={handleblue}>파랑</button>
+          <button onClick={handleyellow}>노랑</button>
+          <button onClick={handlerotate}>회전</button>
+        </buttonWrap>
+      </ColorWrap>
     </>
   );
 };
