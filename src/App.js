@@ -24,6 +24,8 @@ import { ClassEvent } from "./components/6_Event/ClassEvent";
 import { ClickEx } from "./components/6_Event/ClickEx";
 import { FnEvent } from "./components/6_Event/FnEvent";
 import { MakeEvent } from "./components/6_Event/MakeEvent";
+import { BaseRouter } from "./components/7_router/BaseRouter";
+import { RouterEx } from "./components/7_router/RouterEx";
 import { conDb, MenuDb, MusicDb } from "./db";
 import { GlobalStyled } from "./styles/GlobalStyled";
 
@@ -60,7 +62,12 @@ const App = () => {
       {/* <FnEvent /> */}
       {/* <ClickEx /> */}
       {/* <MakeEvent /> */}
-      <Animation />
+      {/* <Animation /> */}
+      {/* 6일차 */}
+
+      {/* <BaseRouter /> */}
+      <RouterEx />
+      {/* 7일차 */}
     </div>
   );
 };

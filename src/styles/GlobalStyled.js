@@ -11,6 +11,9 @@ export const GlobalStyled = createGlobalStyle`
     *{
         box-sizing: border-box;
     }
+    Link{
+      color: black;
+    }
 
     body{
       /* background-color: #555; */
