@@ -37,40 +37,46 @@ const PopMs = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const ColorWrap = styled.div`
+
+const Wrap = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: 50px;
+  justify-content: space-between;
   align-items: center;
+  padding: 100px;
+  font-size: 50px;
 `;
 const ColorBox = styled.div`
   width: 500px;
   height: 500px;
-  background-color: ${(props) => props.buttoncolor};
+  background-color: ${(props) => props.bgColor};
   transform: rotateZ(${(props) => props.rotate});
+  transition: 1s;
 `;
-const buttonWrap = styled.div`
+const Btwrap = styled.div`
+  width: 70%;
   display: flex;
+  justify-content: space-between;
 `;
 
 export const ClickEx = () => {
-  const [color, setcolor] = useState("gold");
+  // const [color, setcolor] = useState("gold");
   const [bool, SetBool] = useState(true);
   const [mscolor, setMscolor] = useState("salmon");
   const [distype, setDistype] = useState("none");
-  const [btcolor, setBtcolor] = useState("salmon");
-  const [btrotate, setBtrotate] = useState("0");
-  const handleColor = () => {
-    if (bool) {
-      setcolor("black");
-      SetBool(false);
-    } else if (!bool) {
-      setcolor("gold");
-      SetBool(true);
-    }
-  };
+  const [color, setColor] = useState("salmon");
+
+  // const handleColor = () => {
+  //   if (bool) {
+  //     setcolor("black");
+  //     SetBool(false);
+  //   } else if (!bool) {
+  //     setcolor("gold");
+  //     SetBool(true);
+  //   }
+  // };
 
   const handleMouseOn = () => {
     if (bool) {
@@ -94,17 +100,22 @@ export const ClickEx = () => {
     }
   };
 
+  const [chrotate, setChrotate] = useState("0deg");
   const handlered = () => {
-    setBtcolor("red");
+    setColor("red");
   };
   const handleblue = () => {
-    setBtcolor("blue");
+    setColor("blue");
   };
   const handleyellow = () => {
-    setBtcolor("gold");
+    setColor("yellow");
   };
   const handlerotate = () => {
-    setBtrotate("365deg");
+    if (chrotate == "360deg") {
+      setChrotate("0deg");
+    } else {
+      setChrotate("360deg");
+    }
   };
   return (
     <>
@@ -121,16 +132,16 @@ export const ClickEx = () => {
         <PopMs>야호오오오오오</PopMs>
       </ButtonWrap> */}
 
-      <ColorWrap>
+      <Wrap>
         버튼을 눌러보세요!
-        <ColorBox buttoncolor={btcolor} rotate={btrotate} />
-        <buttonWrap>
-          <button onClick={handlered}>빨강</button>
-          <button onClick={handleblue}>파랑</button>
-          <button onClick={handleyellow}>노랑</button>
+        <ColorBox bgColor={color} rotate={chrotate} />
+        <Btwrap>
+          <button onClick={handlered}>Red</button>
+          <button onClick={handleblue}>Blue</button>
+          <button onClick={handleyellow}>Yellow</button>
           <button onClick={handlerotate}>회전</button>
-        </buttonWrap>
-      </ColorWrap>
+        </Btwrap>
+      </Wrap>
     </>
   );
 };

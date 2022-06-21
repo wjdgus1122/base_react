@@ -19,9 +19,11 @@ import { Homework } from "./components/4_map/Homework";
 import { Icons } from "./components/5_MusicApp/Icons";
 import { MusicApp } from "./components/5_MusicApp/MusicApp";
 import { MusicEx } from "./components/5_MusicApp/MusicEx";
+import { Animation } from "./components/6_Event/Animation";
 import { ClassEvent } from "./components/6_Event/ClassEvent";
 import { ClickEx } from "./components/6_Event/ClickEx";
 import { FnEvent } from "./components/6_Event/FnEvent";
+import { MakeEvent } from "./components/6_Event/MakeEvent";
 import { conDb, MenuDb, MusicDb } from "./db";
 import { GlobalStyled } from "./styles/GlobalStyled";
 
@@ -56,7 +58,9 @@ const App = () => {
 
       {/* <ClassEvent /> */}
       {/* <FnEvent /> */}
-      <ClickEx />
+      {/* <ClickEx /> */}
+      {/* <MakeEvent /> */}
+      <Animation />
     </div>
   );
 };
