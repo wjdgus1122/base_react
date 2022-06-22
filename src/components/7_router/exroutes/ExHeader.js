@@ -1,54 +1,67 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
+const Wrap = styled.div`
+  width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+`;
 const HeaderWrap = styled.div`
   width: 100%;
   height: 80px;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
-  position: relative;
-  overflow: hidden;
+  padding: 10px 80px;
+  position: fixed;
+  z-index: 10;
   svg {
     font-size: 20px;
-    color: ${(props) => props.color};
     cursor: pointer;
+    color: ${(props) => props.color};
   }
 `;
-const Menu = styled.div`
-  width: 300px;
-  height: 100%;
+const MenuWrap = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: white;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  position: absolute;
-  right: ${(props) => props.po};
+  position: fixed;
+  right: ${(props) => props.on};
   transition: 1s;
 `;
-
 const StyledLink = styled(Link)`
   font-size: 30px;
   font-weight: 900;
-  color: black;
+  color: ${(props) => props.color};
+  text-decoration: none;
 `;
 const StyledLink_2 = styled(Link)`
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 900;
   color: black;
+  text-decoration: none;
+  &:nth-child(2) {
+    margin-top: 100px;
+  }
 `;
 
 export const ExHeader = () => {
-  const [posi, setPosi] = useState("-300px");
+  const [menu, setMenu] = useState("-100%");
   const [chcolor, setChcolor] = useState("black");
-  const handleMenu = () => {
-    if (posi == "-300px") {
-      setPosi("300px");
+  const handlebtn = () => {
+    if (menu == "-100%") {
+      setMenu("0");
     } else {
-      setPosi("-300px");
+      setMenu("-100%");
     }
     if (chcolor == "black") {
       setChcolor("lightgray");
@@ -56,14 +69,26 @@ export const ExHeader = () => {
       setChcolor("black");
     }
   };
+  const handlemenu = () => {
+    setMenu("-100%");
+    setChcolor("black");
+  };
   return (
-    <HeaderWrap>
-      <StyledLink to="/">로고</StyledLink>
-      <FontAwesomeIcon icon={faBars} onClick={handleMenu} color={chcolor} />
-      <Menu po={posi}>
-        <StyledLink_2 to="/menu_1">메뉴1</StyledLink_2>
-        <StyledLink_2 to="/menu_2">메뉴2</StyledLink_2>
-      </Menu>
-    </HeaderWrap>
+    <Wrap>
+      <HeaderWrap>
+        <StyledLink to="/" color={chcolor}>
+          로고
+        </StyledLink>
+        <FontAwesomeIcon icon={faBars} onClick={handlebtn} color={chcolor} />
+      </HeaderWrap>
+      <MenuWrap on={menu}>
+        <StyledLink_2 to="/menu_1" onClick={handlemenu}>
+          메뉴1
+        </StyledLink_2>
+        <StyledLink_2 to="/menu_2" onClick={handlemenu}>
+          메뉴2
+        </StyledLink_2>
+      </MenuWrap>
+    </Wrap>
   );
 };

@@ -7,6 +7,10 @@ import { Menu_2 } from "./exroutes/Menu_2";
 import { ExHome } from "./exroutes/ExHome";
 import { ExFooter } from "./exroutes/ExFooter";
 
+// const ExHeader = styled.div`
+//   position: fixed;
+// `;
+
 export const RouterEx = () => {
   return (
     <Router>

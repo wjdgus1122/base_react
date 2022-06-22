@@ -26,6 +26,7 @@ import { FnEvent } from "./components/6_Event/FnEvent";
 import { MakeEvent } from "./components/6_Event/MakeEvent";
 import { BaseRouter } from "./components/7_router/BaseRouter";
 import { RouterEx } from "./components/7_router/RouterEx";
+import { LayoutRouter } from "./components/8_BaseLayout/LayoutRouter";
 import { conDb, MenuDb, MusicDb } from "./db";
 import { GlobalStyled } from "./styles/GlobalStyled";
 
@@ -66,8 +67,11 @@ const App = () => {
       {/* 6일차 */}
 
       {/* <BaseRouter /> */}
-      <RouterEx />
+      {/* <RouterEx /> */}
       {/* 7일차 */}
+
+      <LayoutRouter />
+      {/* 8일차 */}
     </div>
   );
 };
